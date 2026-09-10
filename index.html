@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NSNOP | Confident Smile – Healthy Tomorrow</title>
+<meta name="description" content="Namma School Namma Ooru Palli – Confident Smile Healthy Tomorrow">
+<style>
+:root{--blue:#063970;--cyan:#0891b2;--teal:#0f766e;--light:#eff8fc;--dark:#102a43;--gray:#64748b;--border:#dbe5ec}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7fafc;color:#243447;line-height:1.6}
+.container{width:min(1150px,92%);margin:auto}
+section{padding:70px 0}
+h1,h2,h3{line-height:1.2}
+.navbar{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border)}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:18px;font-weight:900;color:var(--blue)}.logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:22px;list-style:none}.nav-links a{text-decoration:none;color:#34495e;font-size:13px;font-weight:700}
+.nav-links a:hover{color:var(--cyan)}
+.hero{padding-top:105px;min-height:100vh;color:white;background:linear-gradient(135deg,#032b4c,#075985 65%,#0f766e)}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.hero h1{font-size:clamp(43px,6vw,68px);letter-spacing:-2px}.hero h1 span{color:#9ff4e6}
+.hero .subtitle{font-size:20px;color:#e0f2fe;margin:16px 0}
+.hero .meta{font-size:14px;color:#cbe8f5}
+.buttons{display:flex;flex-wrap:wrap;gap:11px;margin-top:25px}
+.btn{display:inline-block;padding:12px 18px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:800}
+.btn-white{background:white;color:var(--blue)}.btn-outline{border:1px solid rgba(255,255,255,.55);color:white}
+.hero-media{border-radius:20px;overflow:hidden;background:#021a2b;border:1px solid rgba(255,255,255,.25);box-shadow:0 20px 55px rgba(0,0,0,.2)}
+.hero-media iframe{width:100%;aspect-ratio:16/9;border:0;display:block}
+.hero-map{padding:18px;text-align:center;background:rgba(255,255,255,.08)}.hero-map strong{display:block;margin-bottom:7px}
+.eyebrow{text-align:center;text-transform:uppercase;letter-spacing:2px;color:var(--cyan);font-size:12px;font-weight:900}
+.section-title{text-align:center;margin-bottom:38px}.section-title h2{font-size:38px;color:var(--dark);margin:7px 0}.section-title p{max-width:750px;margin:auto;color:var(--gray)}
+.simple-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}
+.section-image{height:330px;border-radius:18px;overflow:hidden;background:#eaf2f6;border:1px solid var(--border)}
+.section-image img{width:100%;height:100%;object-fit:cover}
+.placeholder{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#64748b;font-size:13px;font-weight:700;background:linear-gradient(135deg,#eef7fa,#f8fafc)}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:0 8px 25px rgba(15,23,42,.05)}
+.card h3{color:var(--blue);margin-bottom:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.stat{text-align:center;background:white;border:1px solid var(--border);border-radius:14px;padding:24px 12px}
+.stat b{display:block;font-size:38px;color:var(--blue)}.stat span{font-size:13px;font-weight:700;color:var(--gray)}
+.alt{background:var(--light)}
+.pathway{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.step{text-align:center;background:white;border:1px solid var(--border);border-radius:14px;padding:20px 12px}
+.circle{width:42px;height:42px;border-radius:50%;background:var(--blue);color:white;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;font-weight:900}
+.step h3{font-size:16px;color:var(--blue)}.step p{font-size:12px;color:var(--gray);margin-top:5px}
+.bars{margin-top:12px}.bar{margin:16px 0}.barhead{display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:5px}.track{height:10px;border-radius:20px;background:#e5edf2;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan))}
+.activities{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.activity{background:white;border:1px solid var(--border);border-radius:14px;padding:22px}.activity h3{font-size:17px;color:var(--blue);margin:8px 0}.activity p{font-size:13px;color:var(--gray)}
+.video-section{background:#071b2d;color:white}.video-section .section-title h2{color:white}.video-section .section-title p{color:#cbd5e1}
+.education-list{list-style:none}.education-list li{padding:9px 0;border-bottom:1px solid #edf2f7;font-size:14px}.education-list li:before{content:"✓";color:var(--teal);font-weight:900;margin-right:9px}
+.geo{background:#071b2d;color:white}.geo-box{padding:45px;text-align:center;border-radius:20px;background:linear-gradient(135deg,#0c4a6e,#082f49)}.geo-box h2{font-size:32px}.geo-box p{max-width:700px;margin:10px auto 20px;color:#cbd5e1}
+.register-tools{margin-bottom:18px}.search{width:100%;padding:13px;border:1px solid var(--border);border-radius:8px;font-size:14px}
+.table-wrap{overflow:auto;background:white;border:1px solid var(--border);border-radius:14px;max-height:560px}
+table{width:100%;border-collapse:collapse;min-width:800px}th,td{padding:11px 12px;border-bottom:1px solid #edf2f7;text-align:left;font-size:12px}th{background:var(--blue);color:white;position:sticky;top:0}td a{color:var(--cyan);font-weight:700;text-decoration:none}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.gallery .section-image{height:190px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.person{background:white;border:1px solid var(--border);border-radius:12px;padding:15px}.person strong{display:block;color:var(--blue);font-size:13px}.person span{font-size:11px;color:var(--gray)}
+footer{background:#020617;color:#cbd5e1;padding:40px 0}footer h3{color:white;margin-bottom:8px}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}.bottom{border-top:1px solid #1e293b;margin-top:25px;padding-top:15px;text-align:center;font-size:11px}
+.mobile-menu{display:none}
+@media(max-width:850px){.hero-grid,.simple-grid,.preventive-layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.pathway{grid-template-columns:repeat(2,1fr)}.activities{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.team{grid-template-columns:1fr 1fr}.procedure-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}.mobile-menu{display:block;border:0;background:none;font-size:24px}}
+@media(max-width:550px){section{padding:55px 0}.hero{padding-top:95px}.hero h1{font-size:43px}.stats,.pathway,.activities,.gallery,.team,.footer-grid,.procedure-grid{grid-template-columns:1fr}.section-image{height:260px}.gallery-item{width:275px;height:210px}.hero-logos img{width:62px;height:62px}.hero-logos img.nsnop-logo{width:78px;height:62px}}
+
+/* NSNOP additions */
+.hero-logos{display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap}.hero-logos img{width:72px;height:72px;object-fit:contain;background:rgba(255,255,255,.95);border-radius:50%;padding:6px;box-shadow:0 8px 20px rgba(0,0,0,.18)}.hero-logos img.nsnop-logo{width:88px;height:72px;border-radius:16px;padding:0;object-fit:cover;background:transparent}.preventive-section{background:linear-gradient(180deg,#fff,#f3fafc)}.preventive-layout{display:grid;grid-template-columns:.9fr 1.6fr;gap:20px;align-items:stretch}.preventive-intro{display:flex;flex-direction:column;justify-content:center}.preventive-highlight{display:flex;align-items:center;gap:15px;padding:18px;border-radius:14px;background:var(--light);margin-bottom:18px}.preventive-highlight b{font-size:44px;color:var(--blue);line-height:1}.preventive-highlight span{font-size:13px;font-weight:800;color:var(--gray)}.preventive-intro p{font-size:14px;color:#475569}.preventive-intro .note{margin-top:14px;padding-top:14px;border-top:1px solid var(--border);font-size:12px}.procedure-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.procedure{background:#fff;border:1px solid var(--border);border-radius:15px;padding:20px;min-height:155px;box-shadow:0 8px 25px rgba(15,23,42,.05);position:relative}.procedure span{font-size:11px;font-weight:900;color:var(--cyan);letter-spacing:1px}.procedure h3{font-size:15px;color:var(--blue);margin:10px 0 12px}.procedure b{display:block;font-size:28px;color:var(--dark)}.procedure small{font-weight:800;color:var(--gray)}.gallery-section{background:#071b2d;color:white;overflow:hidden}.gallery-section .section-title h2{color:white}.gallery-section .section-title p{color:#cbd5e1}.gallery-window{overflow:hidden;width:100%;position:relative}.gallery-track{display:flex;gap:18px;width:max-content;animation:nsnop-scroll 38s linear infinite}.gallery-window:hover .gallery-track{animation-play-state:paused}.gallery-item{width:310px;height:235px;border-radius:16px;overflow:hidden;position:relative;background:#0b2940;border:1px solid rgba(255,255,255,.15);flex:none}.gallery-item img{width:100%;height:100%;object-fit:cover;display:block}.gallery-item span{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,.8));font-size:13px;font-weight:800}.gallery-hint{text-align:center;color:#94a3b8;font-size:11px;margin-top:13px}@keyframes nsnop-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 9px))}}.footer-address{margin-top:22px;padding:18px 0;border-top:1px solid #1e293b;border-bottom:1px solid #1e293b;text-align:center;font-size:12px;line-height:1.7;color:#cbd5e1}.footer-address strong{color:white;font-size:13px}
+@media(max-width:850px){.procedure-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:550px){.procedure-grid{grid-template-columns:1fr}.hero-logos img{width:62px;height:62px}.hero-logos img.nsnop-logo{width:78px;height:62px}}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="container nav-inner">
+<div class="logo">NSNOP <span>●</span> KIDS</div>
+<ul class="nav-links">
+<li><a href="#programme">Programme</a></li><li><a href="#impact">Impact</a></li><li><a href="#preventive">Preventive Care</a></li><li><a href="#activities">Activities</a></li><li><a href="#data">Data</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#map">Google Earth</a></li><li><a href="#register">Register</a></li>
+</ul>
+<button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display='flex'">☰</button>
+</div>
+</nav>
+
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="hero-logos" aria-label="Programme and institutional logos">
+<img src="assets/images/institute-logo.png" alt="Karpaga Vinayaga Institute of Dental Sciences logo">
+<img src="assets/images/department-logo.png" alt="Department of Public Health Dentistry logo">
+<img class="nsnop-logo" src="assets/images/nsnop-logo.png" alt="Namma School Namma Ooru Palli logo">
+</div>
+<div class="eyebrow" style="color:#9ff4e6;text-align:left">Namma School Namma Ooru Palli</div>
+<h1>Confident Smile<br><span>Healthy Tomorrow</span></h1>
+<p class="subtitle">A school-based oral health outreach programme bringing screening, education, prevention, primary care and referral closer to children.</p>
+<p class="meta">Department of Public Health Dentistry<br>Karpaga Vinayaga Institute of Dental Sciences<br>Madhuranthakam Block, Chengalpattu District, Tamil Nadu</p>
+<p class="meta" style="margin-top:10px">Academic Year 2025–2026 · Phase 1: January–April 2026 · Phase 2 initiated August 2026</p>
+<div class="buttons">
+<a href="#impact" class="btn btn-white">Explore Programme</a>
+<a href="https://earth.google.com/earth/d/1qcLwPBQNWd-Rpa5Z9lmE7c0Vm1t4llIY?usp=sharing" target="_blank" class="btn btn-outline">🌍 Google Earth</a>
+</div>
+</div>
+<div>
+<div class="hero-media">
+<iframe
+    src="https://www.youtube-nocookie.com/embed/YoOhBVzpYyk"
+    title="NSNOP Programme Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
+</iframe>
+<div class="hero-map"><strong>Programme Video</strong><span style="font-size:12px;color:#cbd5e1">Watch NSNOP in action</span></div>
+</div>
+<div class="hero-map" style="margin-top:12px;border-radius:12px">
+<strong>🌍 Explore the outreach network</strong>
+<a href="https://earth.google.com/earth/d/1qcLwPBQNWd-Rpa5Z9lmE7c0Vm1t4llIY?usp=sharing" target="_blank" class="btn btn-white">Open Interactive Google Earth Project ↗</a>
+</div>
+</div>
+</div>
+</header>
+
+<section id="programme">
+<div class="container">
+<div class="section-title"><div class="eyebrow">01 · Programme</div><h2>A School-Based Oral Health Model</h2><p>NSNOP was designed as a connected oral-health platform rather than a series of isolated screening camps.</p></div>
+<div class="simple-grid">
+<div class="section-image"><img src="assets/images/03-hero-school-outreach.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 03<br>School outreach photograph</div></div>
+<div class="card">
+<h3>Taking Oral Health to the School</h3>
+<p>The programme connects children, schools, teachers, dental professionals, parents and the health system through a school-based pathway.</p>
+<p style="margin-top:13px">The model focuses on access, early detection, prevention, health promotion and continuity of care.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="impact" class="alt">
+<div class="container">
+<div class="section-title"><div class="eyebrow">02 · Impact</div><h2>Programme at a Glance</h2><p>A simple view of the scale and reach of Phase 1.</p></div>
+<div class="simple-grid" style="margin-bottom:25px">
+<div class="card"><div class="stats">
+<div class="stat"><b>97</b><span>Schools reached</span></div><div class="stat"><b>5,705</b><span>Children screened</span></div>
+<div class="stat"><b>1,563</b><span>Procedures recorded</span></div><div class="stat"><b>4,615</b><span>Children referred</span></div>
+</div></div>
+<div class="section-image"><img src="assets/images/04-school-screening.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 04<br>School screening</div></div>
+</div>
+<div class="stats">
+<div class="stat"><b>27.4%</b><span>Received recorded treatment / preventive care</span></div>
+<div class="stat"><b>80.9%</b><span>Referred for further care</span></div>
+<div class="stat"><b>48.0%</b><span>Male</span></div>
+<div class="stat"><b>51.6%</b><span>Female</span></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><div class="eyebrow">03 · Care Pathway</div><h2>From Screening to Care</h2><p>Reach the child at school, understand the need, educate, prevent, treat where feasible and refer appropriately.</p></div>
+<div class="simple-grid">
+<div class="section-image"><img src="assets/images/05-health-education.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 05<br>Health education session</div></div>
+<div class="pathway">
+<div class="step"><div class="circle">1</div><h3>Screen</h3><p>Systematic screening</p></div><div class="step"><div class="circle">2</div><h3>Educate</h3><p>Interactive learning</p></div><div class="step"><div class="circle">3</div><h3>Prevent</h3><p>Preventive care</p></div><div class="step"><div class="circle">4</div><h3>Treat</h3><p>Primary care</p></div><div class="step"><div class="circle">5</div><h3>Refer</h3><p>Continuing care</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="data" class="alt">
+<div class="container">
+<div class="section-title"><div class="eyebrow">04 · Data</div><h2>What Did We Find?</h2><p>Visual summaries based on the updated descriptive programme tables.</p></div>
+<div class="simple-grid">
+<div class="card">
+<h3>Oral Health Findings</h3>
+<div class="bars">
+<div class="bar"><div class="barhead"><span>Dental caries – patients</span><span>47.3%</span></div><div class="track"><div class="fill" style="width:47.3%"></div></div></div>
+<div class="bar"><div class="barhead"><span>Gingivitis</span><span>26.7%</span></div><div class="track"><div class="fill" style="width:26.7%"></div></div></div>
+<div class="bar"><div class="barhead"><span>Satisfactory oral hygiene</span><span>15.8%</span></div><div class="track"><div class="fill" style="width:15.8%"></div></div></div>
+<div class="bar"><div class="barhead"><span>Fracture</span><span>1.8%</span></div><div class="track"><div class="fill" style="width:1.8%"></div></div></div>
+<div class="bar"><div class="barhead"><span>Malocclusion</span><span>1.6%</span></div><div class="track"><div class="fill" style="width:1.6%"></div></div></div>
+<div class="bar"><div class="barhead"><span>Fluorosis</span><span>0.2%</span></div><div class="track"><div class="fill" style="width:.2%"></div></div></div>
+</div>
+</div>
+<div class="section-image"><img src="assets/images/08-preventive-treatment.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 08<br>Preventive treatment</div></div>
+</div>
+</div>
+</section>
+
+<section id="preventive" class="preventive-section">
+<div class="container">
+<div class="section-title"><div class="eyebrow">05 · Preventive & Treatment Care</div><h2>Preventive Care Delivered at School</h2><p>Need-based preventive and primary interventions were provided during school visits wherever appropriate.</p></div>
+<div class="preventive-layout">
+<div class="card preventive-intro">
+<div class="preventive-highlight"><b>1,563</b><span>children received recorded treatment / preventive procedures</span></div>
+<p>The programme included mouth rinse, fluoride varnish, APF, pit-and-fissure sealants, preventive resin restoration and ART / restorations.</p>
+<p class="note"><strong>Programme note:</strong> The lower proportion receiving treatment was mainly related to the need for parent/guardian consent, which informed the design of Phase 2.</p>
+</div>
+<div class="procedure-grid">
+<div class="procedure"><span>01</span><h3>Mouth Rinse</h3><b>416</b><small>26.6%</small></div>
+<div class="procedure"><span>02</span><h3>Fluoride Varnish</h3><b>373</b><small>23.9%</small></div>
+<div class="procedure"><span>03</span><h3>ART / Restorations</h3><b>187</b><small>12.0%</small></div>
+<div class="procedure"><span>04</span><h3>Pit & Fissure Sealants</h3><b>192</b><small>12.3%</small></div>
+<div class="procedure"><span>05</span><h3>Preventive Resin Restoration</h3><b>64</b><small>4.1%</small></div>
+<div class="procedure"><span>06</span><h3>APF</h3><b>331</b><small>21.2%</small></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="activities">
+<div class="container">
+<div class="section-title"><div class="eyebrow">06 · Activities</div><h2>More Than Screening</h2><p>The programme combined clinical services with education, engagement and digital documentation.</p></div>
+<div class="activities">
+<div class="activity"><h3>🔎 Screening</h3><p>Systematic oral-health screening of schoolchildren.</p></div>
+<div class="activity"><h3>📚 Education</h3><p>Structured, interactive oral-health education.</p></div>
+<div class="activity"><h3>🛡️ Prevention</h3><p>Fluoride-based procedures, sealants and preventive interventions.</p></div>
+<div class="activity"><h3>🦷 Primary Care</h3><p>ART/restorations and other feasible school-level treatment.</p></div>
+<div class="activity"><h3>📋 Referral</h3><p>Children requiring further care connected to the dental hospital pathway.</p></div>
+<div class="activity"><h3>📍 Digital Mapping</h3><p>Camp-wise records, geo-tagged photographs and Google Earth mapping.</p></div>
+</div>
+<div class="simple-grid" style="margin-top:25px">
+<div class="section-image"><img src="assets/images/06-poems-skits.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 06<br>Poems / skits</div></div>
+<div class="section-image"><img src="assets/images/07-games-participation.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 07<br>Games / child participation</div></div>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="container">
+<div class="section-title"><div class="eyebrow">07 · Education</div><h2>Learning Beyond the Dental Chair</h2><p>Health education was delivered through creative and child-centred methods.</p></div>
+<div class="simple-grid">
+<div class="card"><ul class="education-list">
+<li><strong>Skits</strong> – memorable oral-health messages through performance.</li>
+<li><strong>Poems</strong> – creative reinforcement of key messages.</li>
+<li><strong>Interactive games</strong> – participation and recall.</li>
+<li><strong>Demonstrations</strong> – practical oral-hygiene skills.</li>
+<li><strong>Question-and-answer</strong> – encouraging children to ask and respond.</li>
+<li><strong>Rewards and recognition</strong> – encouraging involvement.</li>
+</ul>
+<div style="margin-top:18px;padding:15px;background:#fff;border:1px solid var(--border);border-radius:10px"><strong style="color:var(--blue)">Every Child – An Oral Health Kit</strong><br><span style="font-size:13px;color:var(--gray)">Toothbrush + toothpaste to help bridge school education and home practice.</span></div>
+</div>
+<div class="section-image"><img src="assets/images/09-oral-health-kit.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 09<br>Oral-health kit distribution</div></div>
+</div>
+</div>
+</section>
+
+<section id="gallery" class="gallery-section">
+<div class="container">
+<div class="section-title"><div class="eyebrow">08 · Gallery</div><h2>NSNOP in the Field</h2><p>Geo-tagged outreach, classroom engagement and school-based care captured across the programme.</p></div>
+<div class="gallery-window" aria-label="Auto-scrolling NSNOP photo gallery">
+<div class="gallery-track">
+<div class="gallery-item"><img src="assets/images/gallery-01.jpg" alt="Dental screening and outreach camp"><span>Dental screening</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-02.jpg" alt="Schoolchildren participating in oral health activity"><span>Child participation</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-03.jpg" alt="Oral health education session"><span>Health education</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-04.jpg" alt="School outreach team with school staff"><span>School outreach</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-05.jpg" alt="Namma School Namma Ooru Palli programme visual"><span>NSNOP</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-01.jpg" alt="Dental screening and outreach camp"><span>Dental screening</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-02.jpg" alt="Schoolchildren participating in oral health activity"><span>Child participation</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-03.jpg" alt="Oral health education session"><span>Health education</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-04.jpg" alt="School outreach team with school staff"><span>School outreach</span></div>
+<div class="gallery-item"><img src="assets/images/gallery-05.jpg" alt="Namma School Namma Ooru Palli programme visual"><span>NSNOP</span></div>
+</div>
+</div>
+<p class="gallery-hint">Auto-scrolling gallery · Hover to pause</p>
+</div>
+</section>
+
+<section class="video-section">
+<div class="container">
+<div class="section-title"><div class="eyebrow" style="color:#9ff4e6">07 · Programme Story</div><h2>See NSNOP in Action</h2><p>A larger view of the programme video.</p></div>
+<div class="hero-media" style="max-width:900px;margin:auto"><iframe src="https://www.youtube.com/embed/YoOhBVzpYyk" title="NSNOP Programme Video" allowfullscreen></iframe></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><div class="eyebrow">09 · Continuity</div><h2>A Referral Is Not the End</h2><p>Phase 2 strengthens the pathway from screening to comprehensive care.</p></div>
+<div class="simple-grid">
+<div class="section-image"><img src="assets/images/14-phase2-treatment.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 14<br>Phase 2 treatment / follow-up</div></div>
+<div class="card"><h3>Phase 2 – The Next Step</h3><p>The master dataset records 4,615 referrals, representing 80.9% of the screened population.</p><p style="margin-top:12px">Phase 2 was initiated in August 2026 with greater emphasis on bringing referred children to the dental hospital for comprehensive oral care, subject to parent/guardian consent.</p><p style="margin-top:15px;font-weight:800;color:var(--blue)">No child identified through NSNOP should be lost between screening and treatment.</p></div>
+</div>
+</div>
+</section>
+
+<section id="map" class="geo">
+<div class="container">
+<div class="section-title"><div class="eyebrow" style="color:#9ff4e6">10 · Geospatial Mapping</div><h2>Every Camp Became a Data Point</h2><p>Explore the geographic distribution of NSNOP outreach activities.</p></div>
+<div class="simple-grid">
+<div class="section-image"><img src="assets/images/12-google-earth.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder" style="display:none">IMAGE 12<br>Google Earth screenshot</div></div>
+<div class="geo-box"><h2>🌍 Google Earth Project</h2><p>View the connected outreach network, school locations and programme coverage.</p><a class="btn btn-white" href="https://earth.google.com/earth/d/1qcLwPBQNWd-Rpa5Z9lmE7c0Vm1t4llIY?usp=sharing" target="_blank">Open Google Earth ↗</a></div>
+</div>
+</div>
+</section>
+
+<section id="register" class="alt">
+<div class="container">
+<div class="section-title"><div class="eyebrow">11 · Register</div><h2>97-Camp Outreach Register</h2><p>Search the camp-wise programme record.</p></div>
+<div class="register-tools"><input id="search" class="search" placeholder="Search place, date, school type…"></div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Date</th><th>Place</th><th>School type</th><th>Screened</th><th>Preventive / treatment</th><th>Referred</th><th>Map</th></tr></thead><tbody id="rows"></tbody></table></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><div class="eyebrow">12 · Programme Team</div><h2>People Behind the Programme</h2></div>
+<div class="card" style="margin-bottom:22px"><h3>Department of Public Health Dentistry</h3><p>Faculty, postgraduate students and the wider school and health-system partners contributed to the implementation of the programme.</p></div>
+<div class="team">
+<div class="person"><strong>Dr. Vishnu Prasad S., MDS</strong><span>Professor & Head</span></div>
+<div class="person"><strong>Dr. Mahesh J., MDS</strong><span>Reader</span></div>
+<div class="person"><strong>Dr. Indrapriyadharshini G., MDS., Ph.D.</strong><span>Reader</span></div>
+<div class="person"><strong>Dr. Karthikayan R., MDS</strong><span>Reader</span></div>
+<div class="person"><strong>Dr. Revanth M.P., MDS</strong><span>Senior Lecturer</span></div>
+<div class="person"><strong>Dr. Vincy Preetha S., MDS</strong><span>Senior Lecturer</span></div>
+<div class="person"><strong>Dr. Santhosh K., BDS</strong><span>Tutor</span></div>
+<div class="person"><strong>Dr. Durga Devi Raj</strong><span>3rd Year PG</span></div>
+<div class="person"><strong>Dr. Muthu Durga Lakshmi</strong><span>3rd Year PG</span></div>
+<div class="person"><strong>Dr. Raaseedha</strong><span>2nd Year PG</span></div>
+<div class="person"><strong>Dr. Rathish Guna</strong><span>2nd Year PG</span></div>
+<div class="person"><strong>Dr. Divya</strong><span>1st Year PG</span></div>
+<div class="person"><strong>Dr. Gopika</strong><span>1st Year PG</span></div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div><h3>Confident Smile – Healthy Tomorrow</h3><p>Namma School Namma Ooru Palli (NSNOP)</p><p style="margin-top:7px">Department of Public Health Dentistry<br>Karpaga Vinayaga Institute of Dental Sciences</p></div>
+<div><h3>Reach</h3><p>97 schools<br>5,705 children screened<br>1,563 procedures<br>4,615 referrals</p></div>
+<div><h3>Location</h3><p>GST Road, Chinna Kolambakkam,<br>Palayanoor (PO), Madurantakam Taluk,<br>Chengalpattu District,<br>Pin-603308, Tamil Nadu, India</p></div>
+</div>
+<div class="footer-address"><strong>Full Institute Address</strong><br>Karpaga Vinayaga Institute of Dental Sciences, GST Road, Chinna Kolambakkam, Palayanoor (PO), Madurantakam Taluk, Chengalpattu District, Pin-603308, Tamil Nadu, India</div>
+<div class="bottom">© 2026 Karpaga Vinayaga Institute of Dental Sciences · NSNOP</div>
+</div>
+</footer>
+
+<script>
+const schools = [
+["1","30-01-2026","PILLAPOOR","PUPS","56","15","47"],
+["2","30-01-2026","SITHANDI","PUPS","88","24","75"],
+["3","31-01-2026","VADAPATHI","PUMS","51","14","49"],
+["4","31-01-2026","MEIYYUR NORTH","PUPS","36","10","30"],
+["5","31-01-2026","THENPADHI","PUPS","79","22","65"],
+["6","31-01-2026","MEYYUR-SOUTH","PUPS","23","6","21"],
+["7","02-02-2026","SITHANDI MANDAPAM","GHSS","182","50","156"],
+["8","02-02-2026","PAZHAMADUR","PUMS","73","20","68"],
+["9","03-02-2026","BUKKADHURAI","GHSS","156","43","147"],
+["10","03-02-2026","BUKKAATHURAI","PUPS","49","13","49"],
+["11","04-02-2026","KARUNAGARACHERI","PUPS","44","12","38"],
+["12","04-02-2026","SAMATHAVAPURAM","PUPS","43","12","40"],
+["13","04-02-2026","KUMARAVADI","PUPS","42","11","42"],
+["14","05-02-2026","MANGALAM COLONY","PUPS","11","3","10"],
+["15","05-02-2026","PALLIYAGARAM","PUPS","36","10","30"],
+["16","05-02-2026","NELLI","PUPS","34","9","34"],
+["17","06-02-2026","MANGALAM","PUPS","19","5","15"],
+["18","06-02-2026","NELVOY COOTROAD","PUPS","35","10","33"],
+["19","06-02-2026","INDRAPURAM","PUPS","9","2","7"],
+["20","09-02-2026","KUNANGULATHUR","PUPS","25","7","18"],
+["21","09-02-2026","KUNANGULATHUR","GHSS","171","47","134"],
+["22","10-02-2026","VAIYAOOR","GOVT ADW MIDDLE SCHOOL","111","30","99"],
+["23","10-02-2026","MALAIVAIYAVOR","PUPS","44","12","2"],
+["24","11-02-2026","PALAIYANUR","PUPS","12","3","12"],
+["25","11-02-2026","PAZHAYANOOR","PUMS","124","34","109"],
+["26","12-02-2026","PADALAM","PUMS","58","16","58"],
+["27","12-02-2026","PADALAM","GHSS","278","76","253"],
+["28","13-02-2026","ARAIYAPAAKAM","PUMS","66","18","54"],
+["29","13-02-2026","LN PURAM","PUMS","73","20","70"],
+["30","16-02-2026","SANUR","PUMS","50","14","41"],
+["31","16-02-2026","ATHIMANAM.","PUPS","16","4","16"],
+["32","16-02-2026","VALLIVAPAKKAM","PUPS","65","18","65"],
+["33","17-02-2026","MELMA","PUPS","12","3","12"],
+["34","17-02-2026","SATHAMAI","PUPS","14","4","14"],
+["35","17-02-2026","VEDAVAKKAM","PUMS","82","22","70"],
+["36","23-02-2026","VALLUVAPAKKAM","GHSS","150","41","123"],
+["37","24-02-2026","SURAI","PUPS","26","7","23"],
+["38","24-02-2026","ANDAVAKKAM","PUPS","19","5","17"],
+["39","24-02-2026","SITHALAMANGALAM","PUPS","22","6","14"],
+["40","25-03-2026","PAKKAM","GHSS","88","24","80"],
+["41","25-02-2026","PAKKAM","PUMS","45","12","38"],
+["42","26-02-2026","THATHANKUPPAM","PUPS","26","7","0"],
+["43","26-02-2026","VASANTHAVADI","PUPS","16","4","12"],
+["44","26-02-2026","NETHAKUPPAM","PUPS","46","13","36"],
+["45","27-02-2026","SILAVATTAM","PUMS","114","31","80"],
+["46","02-03-2026","KARUNGUZHI EAST","PUMS","81","22","64"],
+["47","02-03-2026","MELAVALAM PETTAI","PUPS","269","74","209"],
+["48","03-03-2026","PUZHUDHIVAKKAM","PUMS","77","21","56"],
+["49","03-03-2026","PUMS, PUDHUPATTU","PUMS","74","20","65"],
+["50","04-03-2026","MUNNITHIKUPPAM","PUMS","76","21","76"],
+["51","04-03-2026","KATHIRICHERI","PUPS","53","15","33"],
+["52","05-03-2026","THOTTANAVAL","PUPS","84","23","56"],
+["53","05-03-2026","KINAR","PUPS","53","15","40"],
+["54","05-03-2026","MULLI","PUPS","14","4","10"],
+["55","06-03-2026","KEELAVAKKAM","PUPS","22","6","15"],
+["56","06-03-2026","ERUVAKKAM","PUPS","20","5","17"],
+["57","06-03-2026","KINAR","PUPS","53","15","40"],
+["58","09-09-2026","MADHURANTHAGAM","PUPS","113","31","91"],
+["59","09-09-2026","KANDRACHERI","PUMS","116","32","54"],
+["60","10-03-2026","BUDHUR","PUPS","36","10","21"],
+["61","10-03-2026","BUDHUR","GHSS","96","26","54"],
+["62","11-03-2026","KUNNATHUR","PUPS","59","16","64"],
+["63","11-03-2026","KEEZHPATTU","PUPS","23","6","17"],
+["64","12-03-2026","ESSUR","PUPS","57","16","52"],
+["65","12-03-2026","ESSUR","PUMS","46","13","34"],
+["66","13-03-2026","VEERANAKUNNAM","PUPS","52","14","47"],
+["67","13-03-2026","VEERANAKUNNAM","GHSS","108","30","89"],
+["68","17-03-2026","ENDATHUR","PUPS","73","20","60"],
+["69","17-03-2026","ZAMIN ENDATHUR","GHSS","71","19","64"],
+["70","18-03-2026","MALAIPALAYAM","PUPS","127","35","95"],
+["71","18-03-2026","MALAIPALAIYAM","GHSS","113","31","101"],
+["72","23-03-2026","ARUNGUNAM","PUPS","88","24","80"],
+["73","23-03-2026","DEVATHUR","GOVT ADW MIDDLE SCHOOL","68","19","14"],
+["74","23-03-2026","MARIPUTHUR","PUPS","12","3","12"],
+["75","23-03-2026","KAVATHUR","PUMS","64","18","64"],
+["76","24-03-2026","MELAKANDAI","PUPS","29","8","29"],
+["77","24-03-2026","KEEZHAKANDAI","PUPS","23","6","23"],
+["78","24-03-2026","ATHIVAKKAM","PUPS","44","12","42"],
+["79","24-03-2026","MURUGAMPAKKAM","PUPS","44","12","43"],
+["80","25-03-2026","ZAMINPERUVELU","PUMS","64","18","58"],
+["81","25-03-2026","PAIYAMBADI","PUPS","17","5","15"],
+["82","26-03-2026","NETRAMBAKKAM","GOVT ADW PRIMARY SCHOOL","24","7","3"],
+["83","26-03-2026","MARUVALAM","PUMS","83","23","82"],
+["84","26-03-2026","OZHAVETTI","PUPS","36","10","0"],
+["85","26-03-2026","CHINAVENMANI","PUPS","33","9","0"],
+["86","27-03-2026","NESAPAKKAM","PUPS","7","2","2"],
+["87","27-03-2026","ARIYANOOR","PUPS","15","4","0"],
+["88","27-03-2026","NAGAMALAI","PUPS","18","5","5"],
+["89","27-03-2026","PERIYAVENMANI","PUPS","38","10","28"],
+["90","27-03-2026","DEVANUUR","PUPS","10","3","7"],
+["91","30-03-2026","NALLAMUR","PUPS","108","30","88"],
+["92","30-03-2026","KEEZHKARNAI","PUPS","10","3","8"],
+["93","30-03-2026","KOLLAMBAKKAM","PUPS","21","6","18"],
+["94","30-03-2026","CHITHAMOOR","PUPS","8","2","8"],
+["95","02-04-2026","THONNADU","PUPS","30","8","30"],
+["96","02-04-2026","NEELAMANGALAM","PUPS","14","4","14"],
+["97","02-04-2026","MELVASALAI","PUPS","12","3","12"]
+];
+function render(data){
+ const tbody=document.getElementById('rows'); tbody.innerHTML='';
+ data.forEach(r=>{
+  const tr=document.createElement('tr');
+  const q=encodeURIComponent(r[2]+', Madhuranthakam, Chengalpattu, Tamil Nadu');
+  tr.innerHTML=`<td>${r[0]}</td><td>${r[1]}</td><td><strong>${r[2]}</strong></td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td><td><a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank">View</a></td>`;
+  tbody.appendChild(tr);
+ });
+}
+render(schools);
+document.getElementById('search').addEventListener('input',function(){
+ const q=this.value.toLowerCase();
+ render(schools.filter(r=>r.join(' ').toLowerCase().includes(q)));
+});
+</script>
+</body>
+</html>
