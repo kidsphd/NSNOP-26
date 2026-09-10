@@ -473,7 +473,7 @@ function render(data){
  const tbody=document.getElementById('rows'); tbody.innerHTML='';
  data.forEach(r=>{
   const tr=document.createElement('tr');
-  const q=encodeURIComponent(r[2]+', Madhuranthakam, Chengalpattu, Tamil Nadu');
+  const q=encodeURIComponent(r[2]+',Contact:, Dr Vishnu Prasad, (9894720548), Madhuranthakam, Chengalpattu, Tamil Nadu');
   tr.innerHTML=`<td>${r[0]}</td><td>${r[1]}</td><td><strong>${r[2]}</strong></td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td><td>${r[6]}</td><td><a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank">View</a></td>`;
   tbody.appendChild(tr);
  });
